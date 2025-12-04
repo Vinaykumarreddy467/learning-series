@@ -1,13 +1,14 @@
 // Digital Clock - Real-time clock display
 function updateClock() {
-    // Get current date and time
+    
     const now = new Date();
 
     // Format time (HH:MM:SS)
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
-    const timeString = `${hours}:${minutes}:${seconds}`;
+    const milliseconds = String(now.getMilliseconds()).padStart(3, '0');
+    const timeString = `${hours}:${minutes}:${seconds}:${milliseconds}`;
 
     // Format date (Day, Month Date, Year)
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -20,11 +21,10 @@ function updateClock() {
     const year = now.getFullYear();
     const dateString = `${dayName}, ${monthName} ${date}, ${year}`;
 
-    // Update DOM elements
+    
     document.getElementById('timeDisplay').textContent = timeString;
     document.getElementById('dateDisplay').textContent = dateString;
 }
-
-// Update clock every second
-updateClock(); // Initial call to avoid delay
-setInterval(updateClock, 1000);
+// Initial call to display clock immediately
+updateClock();
+setInterval(updateClock, 1); // Update every millisecond

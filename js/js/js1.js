@@ -234,89 +234,175 @@
 
 
 //callback function
-function greet (name,callback){
-    console.log("Hello "+ name);
-    callback();
-}
-function saybye(){
-    console.log("Goodbye!!")
-}
-greet("Apurva",saybye);
+// function greet (name,callback){
+//     console.log("Hello "+ name);
+//     callback();
+// }
+// function saybye(){
+//     console.log("Goodbye!!")
+// }
+// greet("Apurva",saybye);
 
-function sayHi(){
-    console.log("hi");
-}
-greet("vinay",sayHi);
-
-
-//functions types in javascript
-//function declaration
-function sum(a, b){
-    return a + b;
-}
-console.log(sum(5, 10));
-//function expression
-function expressionExample(){
-    console.log("This is a  example.");
-}   
-expressionExample();
-//arraw function
-const arrowFunctionExample = (a, b) => {
-    return a * b;
-}
-console.log(arrowFunctionExample(4, 5));
-//immediately invoked function expression (IIFE)
-(function(){
-    console.log("This is an IIFE example.");
-})();
-//Generator Function
-function* generatorExample() {
-    yield 1;
-    yield 2;
-    yield 3;
-}
-
-//closure function
-function outerFunction(outerVariable) {
-    return function innerFunction(innerVariable) {
-        console.log('Outer Variable: ' + outerVariable);
-        console.log('Inner Variable: ' + innerVariable);
-    }
-}
-
-const newFunction = outerFunction('outside');
-newFunction('inside');
-newFunction('another inside');
-
-// Arrow function with implicit return
-const implicitReturn = x => x + 10;
-console.log(implicitReturn(5));
+// function sayHi(){
+//     console.log("hi");
+// }
+// greet("vinay",sayHi);
 
 
-//call, apply and bind methods
-const person = {
-    fullName: function(city, country) {
-        return this.firstName + " " + this.lastName + ", " + city + ", " + country;
-    }
-}
-const person1 = {
-    firstName: "John",
-    lastName: "Doe"
-}
-const person2 = {
-    firstName: "Jane",
-    lastName: "Smith"
-}
-console.log(person.fullName.call(person1, "New York", "USA"));
-console.log(person.fullName.apply(person2, ["London", "UK"]));
-const boundFunction = person.fullName.bind(person1, "Los Angeles", "USA");
-console.log(boundFunction());
-//function methods types
-const test = function() {
-    console.log('This is a test function.');
-}
-test();
-const add = function(a, b) {
-    return a + b;
-}
-console.log(add(5, 3));
+// //functions types in javascript
+// //function declaration
+// function sum(a, b){
+//     return a + b;
+// }
+// console.log(sum(5, 10));
+// //function expression
+// function expressionExample(){
+//     console.log("This is a  example.");
+// }   
+// expressionExample();
+// //arraw function
+// const arrowFunctionExample = (a, b) => {
+//     return a * b;
+// }
+// console.log(arrowFunctionExample(4, 5));
+// //immediately invoked function expression (IIFE)
+// (function(){
+//     console.log("This is an IIFE example.");
+// })();
+// //Generator Function
+// function* generatorExample() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+
+// //closure function
+// function outerFunction(outerVariable) {
+//     return function innerFunction(innerVariable) {
+//         console.log('Outer Variable: ' + outerVariable);
+//         console.log('Inner Variable: ' + innerVariable);
+//     }
+// }
+
+// const newFunction = outerFunction('outside');
+// newFunction('inside');
+// newFunction('another inside');
+
+// // Arrow function with implicit return
+// const implicitReturn = x => x + 10;
+// console.log(implicitReturn(5));
+
+
+// //call, apply and bind methods
+// const person = {
+//     fullName: function(city, country) {
+//         return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+//     }
+// }
+// const person1 = {
+//     firstName: "John",
+//     lastName: "Doe"
+// }
+// const person2 = {
+//     firstName: "Jane",
+//     lastName: "Smith"
+// }
+// console.log(person.fullName.call(person1, "New York", "USA"));
+// console.log(person.fullName.apply(person2, ["London", "UK"]));
+// const boundFunction = person.fullName.bind(person1, "Los Angeles", "USA");
+// console.log(boundFunction());
+// //function methods types
+// const test = function() {
+//     console.log('This is a test function.');
+// }
+// test();
+// const add = function(a, b) {
+//     return a + b;
+// }
+// console.log(add(5, 3));
+
+
+//object syntax
+// const person = {
+//     firstName: "Vinay",
+//     lastName: "molakathala",
+//     age: 25
+// };
+// console.log(person.firstName);
+// console.log(person["lastName"]);
+// person.age = 26;
+// console.log(person.age);
+// person.city = "New York";
+// console.log(person.city);
+
+// delete person.age;
+// console.log(person);
+
+//object literal
+// const car = {
+//     make: "Toyota",
+//     model: "Camry",
+//     year: 2020,
+//     getDetails: function() {
+//         return this.make + " " + this.model + " " + this.year;
+//     }
+// };
+// console.log(car.getDetails());
+
+//object constructor
+// function Person(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.getFullName = function() {
+//         return this.firstName + " " + this.lastName;
+//     };
+// }
+// const person1 = new Person("John", "Doe", 30);
+// console.log(person1.getFullName());
+// const person2 = new Person("Jane", "Smith", 28);
+// console.log(person2.getFullName());
+
+//object.assign
+// const target = { a: 1, b: 2 };
+// const source = { b: 4, c: 5 };
+// const returnedTarget = Object.assign(target, source);
+// console.log(returnedTarget); // { a: 1, b: 4, c: 5 }
+
+//object.keys
+// const obj = { a: 1, b: 2, c: 3 };
+// const keys = Object.keys(obj);
+// console.log(keys); // ["a", "b", "c"]
+//object.values
+// const values = Object.values(obj);
+// console.log(values); // [1, 2, 3]
+
+//object.create
+const personProto = {
+    name: "vinay"  ,
+    age: 25
+};
+let protoperson = Object.create(personProto);
+console.log(); 
+
+
+
+// const person1 = Object.create(personProto);
+// person1.firstName = "Vinay";
+// person1.greet(); // Hello, Vinay
+
+//inhertance in javascript
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }   
+//     speak() {
+//         console.log(this.name + ' makes a noise.');
+//     }
+// }
+
+// class Dog extends Animal {
+//     speak() {
+//         console.log(this.name + ' barks.');
+//     }
+// }
