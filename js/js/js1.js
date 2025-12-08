@@ -102,7 +102,7 @@
 // } 
 
 // Nested forloop
- 
+
 // for(let i=1; i<4; i++){
 //     console.log("I value", i);
 //     for(let j=1; j<4; j++){
@@ -115,9 +115,9 @@
 
 // let data = 4; Intilization
 // while(condition){
-    // console.log("Hello world");
-    // block code 
-    // i++ (Increment)
+// console.log("Hello world");
+// block code 
+// i++ (Increment)
 // }
 
 // let i = 5;
@@ -378,12 +378,12 @@
 // console.log(values); // [1, 2, 3]
 
 //object.create
-const personProto = {
-    name: "vinay"  ,
-    age: 25
-};
-let protoperson = Object.create(personProto);
-console.log(); 
+// const personProto = {
+//     name: "vinay"  ,
+//     age: 25
+// };
+// let protoperson = Object.create(personProto);
+// console.log(); 
 
 
 
@@ -406,3 +406,91 @@ console.log();
 //         console.log(this.name + ' barks.');
 //     }
 // }
+
+// object properties
+// Object Properties in JavaScript
+
+// Object properties are key-value pairs that define the characteristics of an object.
+// There are several ways to work with object properties in JavaScript.
+
+// ============================================
+// 1. Creating an Object with Properties
+// ============================================
+const obj = {
+    name: "vinay",      // String property
+    age: 25             // Number property
+};
+console.log(obj);
+
+// 2. Object.getOwnPropertyNames()
+console.log(Object.getOwnPropertyNames(obj)); // ["name", "age"]
+
+// 3. Object.keys()
+console.log(Object.keys(obj)); // ["name", "age"]
+
+// 4. Object.values()
+console.log(Object.values(obj)); // ["vinay", 25]
+
+// 5. Object.entries()
+console.log(Object.entries(obj)); // [["name", "vinay"], ["age", 25]]
+
+// 6. Object.defineProperty()
+Object.defineProperty(obj, 'gender', {
+    value: 'male',
+
+});
+console.log(obj.gender);
+
+// 7. Modifying a Property Value
+obj.age = 26;
+console.log(obj.age); // 26
+
+//8. Deleting a Property
+delete obj.name;
+console.log(obj.name); // undefined — property no longer exists
+
+// 9. Additional Examples with Property Descriptors
+Object.defineProperty(obj, 'country', {
+    value: 'India'
+});
+console.log(obj.country); // "India"
+// obj.country = "USA";   // This will fail silently in non-strict mode
+
+// 10. Getting Property Descriptors
+const descriptor = Object.getOwnPropertyDescriptor(obj, 'gender');
+console.log(descriptor);
+// Output: { value: 'male', writable: true, enumerable: true, configurable: true }
+
+// 11. Check if Object Has a Property
+console.log(obj.hasOwnProperty('age')); // true
+console.log(obj.hasOwnProperty('name')); // false (was deleted)
+
+
+// 12. Property Accessor Methods
+console.log(obj.age); // 26
+
+// Bracket notation 
+console.log(obj['age']); // 26
+
+// Dynamic property access
+const propName = 'age';
+console.log(obj[propName]); // 26
+
+//array of objects
+const user = [
+    { id: 1, name: "vinay", age: 25 },
+    { id: 2, name: "apurva", age: 24 },
+    { id: 3, name: "shannu", age: 26 },
+];
+
+const user2 =[
+    { id: 1, name: "vinay", city:"bang" },
+    { id: 2, name: "apurva", city:"pune" },
+    { id: 3, name: "shannu", city:"chennai" },
+]
+//merge two array of objects based on id
+const mergedUsers = user.map(u => ({
+    ...u,
+    ...user2.find(u2 => u2.id === u.id)
+}));
+console.log(mergedUsers);
