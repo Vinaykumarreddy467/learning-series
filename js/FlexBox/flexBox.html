@@ -1,27 +1,31 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         body {
-            
+
             margin: 10px;
             padding: 10px;
         }
-        ul{
+
+        ul {
             text-decoration: none;
         }
-        .container{
+
+        .container {
             display: flex;
             flex-wrap: wrap;
             list-style: none;
             background-color: lightgray;
             padding: 10px;
             gap: 40px;
-            
+
         }
-        .list-item{
+
+        .list-item {
             background-color: rgb(248, 119, 71);
             padding: 20px;
             border-radius: 10px;
@@ -30,21 +34,28 @@
             color: rgb(239, 237, 237);
         }
 
-        p{
+        p {
             text-align: justify;
         }
-        .container1{
+
+        .section {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 100vh; /* or 100dvh for dynamic adjustment on mobile */
+            width: 100vw;
+        }
+
+        .container1 {
             display: flex;
-            
             justify-content: space-between;
-            
             flex-wrap: wrap;
             list-style: none;
             padding: 10px;
             gap: 40px;
             background: linear-gradient(to right, #4160e8, #d44fe6);
         }
-        .items{
+
+        .items {
             background-color: rgb(127, 103, 147);
             padding: 20px;
             border-radius: 10px;
@@ -54,29 +65,47 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Flex Box Example</h1>
-        <ul  class="container">
+    <section>
+        <ul class="container">
             <li class="list-item">item1</li>
             <li class="list-item">item1</li>
             <li class="list-item">item1</li>
             <li class="list-item">item1</li>
             <li class="list-item">item1</li>
         </ul>
+    </section>
+
     <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil repudiandae dolore atque molestias, repellendus quis reprehenderit provident illo vero, voluptatum assumenda dicta, minima saepe rerum placeat eius laborum omnis commodi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil repudiandae dolore atque molestias,
+            repellendus quis reprehenderit provident illo vero, voluptatum assumenda dicta, minima saepe rerum placeat
+            eius laborum omnis commodi.</p>
     </div>
-    <div>
+    <section>
         <ul class="container1">
             <li class="items">items</li>
             <li class="items">items</li>
             <li class="items">items</li>
-            <li class="items">items</li>    
+            <li class="items">items</li>
             <li class="items">items</li>
             <li class="items">items</li>
             <li class="items">items</li>
         </ul>
-    </div>
-    
+    </section>
+    <section>
+        <ul class="container2">
+            <li class="items">items</li>
+            <li class="items">items</li>
+            <li class="items">items</li>
+            <li class="items">items</li>
+            <li class="items">items</li>
+            <li class="items">items</li>
+            <li class="items">items</li>
+        </ul>
+    </section>
+
 </body>
+
 </html>
