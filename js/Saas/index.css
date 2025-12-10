@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  margin: 30px;
+  background-color: blueviolet;
+}
+
+.navigation {
+  list-style: none;
+}
+.navigation li {
+  display: inline-block;
+  margin-left: 30px;
+}
+.navigation:first-child {
+  margin-left: 0;
+}/*# sourceMappingURL=index.css.map */
