@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="banner.css">
     <link rel="stylesheet" href="progressbar.css">
     <link rel="stylesheet" href="flexproperties.css">
     <link rel="stylesheet" href="displayProperties.css">
@@ -15,6 +16,10 @@
     <link rel="stylesheet" href="myProject.css">
     <link rel="stylesheet" href="/1task/swiper/swiperSlider.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!-- Poppins google font cdn  -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- swipper CDN  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -24,29 +29,29 @@
 <body>
     <header>
         <!-- nav bar -->
-        <nav class="nav">
-            <ul class="nav-list">
+        <nav class="nav margin-x align-center gap-3 pt-10">
+            <ul class="nav-list ">
                 <ul class="nav-list p-1">
-                    <li class="p"><a href="#home">Home</a></li>
-                    <li class="p"><a href="#about">About Me</a></li>
-                    <li class="p"><a href="#services">Services</a></li>
-                    <li class="p"><a href="#projects">Projects</a></li>
-                    <li class="p"><a href="#testimonials">Testimonials</a></li>
-                    <li class="p"><a href="#contact">Contact</a></li>
-                    <li class="p button"><a href="" download>Download CV</a></li>
+                    <li class="p-0"><a href="#home">Home</a></li>
+                    <li class="p-0"><a href="#about">About Me</a></li>
+                    <li class="p-0"><a href="#services">Services</a></li>
+                    <li class="p-0"><a href="#projects">Projects</a></li>
+                    <li class="p-0"><a href="#testimonials">Testimonials</a></li>
+                    <li class="p-0"><a href="#contact">Contact</a></li>
+                    <li class="p-0 button"><a href="" download>Download CV</a></li>
                 </ul>
             </ul>
 
             <div class="nav-logo">
-                <img class="nav-image" src="https://dummyimage.com/242x80/000/fff&text=image" alt="Logo">
+                <img class="nav-image " src="/1task/images/banner-image.png" alt="Logo">
             </div>
         </nav>
         <!-- banner section -->
-        <section class="hero">
+        <section class="hero margin-x">
             <div class="hero-content">
-                <h1 class="hero-content-title p">I'm</h1>
-                <h1 class="hero-content-name p">Vinay Kumar</h1>
-                <h3 class="hero-content-subtitle p">Frontend Developer</h3>
+                <h1 class="hero-content-title p-0 im-text">I'm</h1>
+                <h1 class="hero-content-name p-0 portfolio-name">Vinay Kumar</h1>
+                <h1 class="hero-content-subtitle p-0 ">Frontend Developer</h3>
                 <article>
                     <p class="hero-content-description">
                         I am a passionate frontend developer with experience in creating dynamic and responsive web
@@ -66,7 +71,7 @@
             </div>
         </section>
     </header>
-    <main>
+    <main class="margin-x">
         <!-- About Me Section -->
         <section>
             <div class="aboutMe">
@@ -258,17 +263,18 @@
         <!-- lets design together / contact-->
 
         <section class="mt-50">
-             <div class="flex-column gap-3">
+            <div class="flex-column gap-3">
                 <div class="text-align-center flex-center">
                     <h1 class="title-tag">lets design together</h1>
                     <p class="p-max">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos et porro optio,
-                        dignissimos a voluptatem eligendi eaque aliquid perferendis harum neque in iste odio ducimus quod
+                        dignissimos a voluptatem eligendi eaque aliquid perferendis harum neque in iste odio ducimus
+                        quod
                         doloremque ut culpa amet?</p>
                 </div>
-           
+
                 <div class="flex-row justify-center email">
-                    <input class="email" type="email" placeholder="Enter your Email">
-                    <button class="p button">Contact Me</button>
+                    <input class="email-id" type="email" placeholder="Enter your Email">
+                    <button class="p-0 button">Contact Me</button>
                 </div>
             </div>
         </section>
@@ -277,6 +283,36 @@
 
     <!-- Footer (optional) -->
     <footer>
+        <section class="mt-50">
+            <div class="flex-column align-center pt-30">
+                <img class="footer-image" src="/1task/images/banner-Image.png" alt="">
+            </div>
+            <div class="mt-30">
+                <nav class="flex-row justify-center">
+                    <ul class="">
+                        <ul class="nav-list p-1">
+                            <li class="p"><a href="#home">Home</a></li>
+                            <li class="p"><a href="#about">About Me</a></li>
+                            <li class="p"><a href="#services">Services</a></li>
+                            <li class="p"><a href="#projects">Projects</a></li>
+                            <li class="p"><a href="#testimonials">Testimonials</a></li>
+                            <li class="p"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <div class="social-icons pb-50">
+                    <a href="#" class="footer-icons"><img src="/1task/images/facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="footer-icons"><img src="/1task/images/twitter.svg" alt="Twitter"></a>
+                    <a href="#" class="footer-icons"><img src="/1task/images/instagram.svg" alt="Instagram"></a>
+                    <a href="#" class="footer-icons"><img src="/1task/images/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="text-align-center copyright pt-10 pb-10">
+                <p>© 2025 <span class="FawziUiUx">FawziUiUx </span>All Rights Reserved, Inc</p>
+            </div>
+        </section>
 
     </footer>
 
@@ -288,7 +324,15 @@
             slidesPerView: 1.2,
             spaceBetween: 40,
             centeredSlides: true,
+
             loop: true,
+
+            autoplay: {
+                delay: 3000,              // 3 seconds
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,  // stops on hover
+            },
+
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,

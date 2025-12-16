@@ -1,0 +1,125 @@
+
+/* nav bar and banner section  */
+
+.nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.nav-image {
+    height: 30px;
+    width: 90px;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.button{
+    background-color: #fd6f00;
+    border-radius: 5px;
+    color: var(--orange-50);
+
+}
+
+.im-text{
+    font-size: 24px;
+
+}
+.portfolio-name{
+    font-size:32px;
+    font-weight: 600;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    padding: 0px;
+}
+
+.hero-content-name {
+    color: #fd6f00;
+    /* font-size: 30px; */
+}
+
+.hero-image {
+    height: 300px;
+    width: 250px;
+    align-content: flex-end;
+    border: 6px solid #fd6f00;
+    border-color: linear-gradient(45deg, #fd6f00, #ffb800);
+    border-radius: 50%;
+    border-width: 5px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* //about me  */
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.skill-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.aboutMe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    align-items: center;
+    gap: 50px;
+}
+.aboutMe-image{
+    height: 300px;
+    width: 250px;
+    border: 6px solid #fd6f00;
+    border-color: linear-gradient(45deg, #fd6f00, #ffb800);
+    border-radius: 50%;
+    border-width: 5px;
+}
+.meter-info {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color);
+  padding: 30px 20px;
+}
+
+
+.meter-info p {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
