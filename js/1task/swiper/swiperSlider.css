@@ -1,0 +1,96 @@
+
+@import url(/1task/colors.css);
+.testimonial-swiper {
+  width: 85%;
+  height: 250px;
+  padding-bottom: 60px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: var(--black-50);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.content {
+  max-width: 600px;
+}
+
+.quote {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Opening quote */
+.quote::before {
+  content: "“";
+  position: absolute;
+  transform: translateY(-40%);
+  left: 0;
+  top: 0;
+  color: var(--orange-500);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Closing quote */
+.quote::after {
+  content: "”";
+  position: absolute;
+  transform: translateY(+40%);
+  right: 0;
+  bottom: 0;
+  color: var(--orange-500);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+
+h4 {
+  text-decoration-style: solid;
+  margin-bottom: 4px;
+}
+
+small {
+  color: #777;
+}
+
+/* Side slide fade */
+.swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.3;
+}
+
+/* Pagination pills */
+.swiper-pagination-bullet {
+  width: 3px;
+  height: 8px;
+  border-radius: 20px;
+  background: #d9d9d9;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: orange;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--orange-500);
+}

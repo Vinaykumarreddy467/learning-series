@@ -110,5 +110,3 @@ fetchData(function(data) {
     console.log('Data received:', data);
 });
 
-
-
