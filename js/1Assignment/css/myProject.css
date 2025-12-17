@@ -1,0 +1,57 @@
+@import url(/1task/css/colors.css);
+
+.projectTypes>li {
+    margin: 30px;
+    border: 0.4px;
+    border-radius: 12px;
+    border-color: var(--black-100);
+    border-style: solid;
+    padding: 4px 8px;
+    background-color: var(--black-50);
+    gap: 10px;
+}
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 280px;
+    height: 250px;
+    background: #c4b4a6;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container img {
+    position: absolute;
+    width: 50%;
+    max-width: 260px;
+    height: auto;
+    padding-left: 20px
+}
+
+.image-back {
+    top: 0;
+    left: 40%;
+    opacity: 0.95;
+    transform: translatey(-220px);
+}
+
+.image-front {
+    top: 40px;
+    z-index: 1;
+}
+
+.project-category{
+    color: var(--orange-400);
+
+}
+.project-title{
+    font-weight: 700;
+    font-size: bold;
+
+}
