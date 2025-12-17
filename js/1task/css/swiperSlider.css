@@ -8,7 +8,7 @@
   overflow: visible; 
 }
 .swiper{
-  overflow: visible !important;
+  /* overflow: visible !important; */
 }
 
 .swiper-slide {

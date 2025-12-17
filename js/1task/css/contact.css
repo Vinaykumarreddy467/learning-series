@@ -1,8 +1,5 @@
 .email{
-    gap: 30px;
-}
-::placeholder {
-  font-size: 18px;
+    gap: 20px;
 }
 
 .email-id{
@@ -10,5 +7,5 @@
     height: 35px;
     border: 1px solid var(--black-100);
     border-radius: 8px;
-
+    padding: 5px 10px;
 }
