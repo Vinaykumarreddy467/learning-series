@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+$color-primary: rgb(234, 234, 180);
+$color-seconday: brown;
+$color-teritiorary: blue;
+nav {
+  margin: 30px;
+  background-color: blueviolet;
+}
+.navigation {
+  list-style: none;
+   li {
+    display: inline-block;
+    margin-left: 30px;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+}

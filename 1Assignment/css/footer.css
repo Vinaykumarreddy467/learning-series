@@ -1,0 +1,19 @@
+@import url(/1task/css/colors.css);
+/* footer{
+   
+    background-color: #f7f7f7;
+} */
+ footer{
+  /* width: 100vw !important; */
+  background-color: #f7f7f7;
+}
+.footer-image{
+    height: 150px;
+    
+}
+.copyright{
+    background-color: var(--black-400);
+}
+.FawziUiUx{
+    color: var(--orange-500);
+}

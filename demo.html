@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            text-align: center;
+            display: flex;
+            height: calc(99vh - 55px);
+
+        }
+
+        .header {
+            justify-content: center;
+            background-color: red;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+
+        .item {
+            flex: 1 1 auto;
+        }
+
+        .left {
+            background-color: blue;
+            flex-basis: 100px;
+
+        }
+
+        .content {
+            flex-basis: 600px;
+        }
+
+        .right {
+            background-color: greenyellow;
+            flex-basis: 100px;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: palevioletred;
+            justify-content: end;
+
+        }
+        @media screen  and (max-width:767px){
+            .main{
+                flex-direction: column;
+            }
+            .content{
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <header class="header">
+            <h1>header</h1>
+        </header>
+        <main class="main">
+            <aside class="left item ">left content</aside>
+            <article class="content item">main</article>
+            <aside class="right item ">right</aside>
+        </main>
+        <footer class="footer">
+            <h2>footer</h2>
+        </footer>
+    </section>
+</body>
+
+</html>
