@@ -12,3 +12,6 @@
     align-items: center;
     gap: 10px;
 }
+.flex-wrap{
+    flex-wrap: wrap;
+}

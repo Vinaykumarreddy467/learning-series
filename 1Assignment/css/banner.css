@@ -1,10 +1,8 @@
 /* nav bar and banner section  */
 
-/* nav bar and banner section  */
-
 .nav {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -17,10 +15,12 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;   /* //this needed to be removed after  */
     justify-content: space-between;
     gap: 20px;
+    white-space: nowrap;
+    
 }
-
 .nav-list li {
     margin-left: 5px;
 }
@@ -43,8 +43,13 @@
     cursor: pointer;
     border: 1px solid #fd6f00;
     font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+}
+.menu-button{
+    visibility:collapse ;
 }
 
+/* banner section  */
 .im-text {
     font-size: 24px;
 
@@ -166,23 +171,36 @@
 
 
 @media (max-width: 768px) {
+   body{
+    margin: 0;
+    padding: 0;
+   }
     .nav {
-        flex-direction: column;
-        /* Stack logo and menu */
-        gap: 15px;
-        padding-top: 20px;
+        flex-direction: row;
+        align-items: center;
+        margin: 20px 50px;
     }
-
+    .nav-image{
+        height: 40px ;
+        width: 120px ;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
     .nav-list {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        padding: 0;
+       display: flex;
+       display: none;
+       flex-basis: 20px;
+       justify-content: flex-end;
+
+    }
+    .menu-button{
+        visibility: visible;
+        height: 30px;
     }
 
+    /* banner section  */
     .hero {
         flex-direction: column-reverse;
-        /* Image on top, text below */
         text-align: center;
         margin-top: 30px;
         gap: 30px;
@@ -190,12 +208,14 @@
 
     .Designer {
         padding-left: 0;
-        /* Remove the 10vw offset for mobile */
     }
 
     .aboutMe {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+    }
+    .skills{
+        padding-top: 30px;
     }
 }

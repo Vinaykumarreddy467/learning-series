@@ -10,10 +10,17 @@
     background-color: var(--black-50);
     gap: 10px;
 }
+
+.projectTypes>li>a {
+    white-space: nowrap;
+
+}
+
 .projectTypes li.active {
     background-color: var(--orange-400);
     color: white;
 }
+
 .cards {
     display: flex;
     gap: 30px;
@@ -50,11 +57,12 @@
     z-index: 1;
 }
 
-.project-category{
+.project-category {
     color: var(--orange-400);
 
 }
-.project-title{
+
+.project-title {
     font-weight: 700;
     font-size: bold;
 
@@ -63,23 +71,26 @@
 @media (max-width: 768px) {
     .services-list {
         margin: 10px;
-        flex-direction: column;       
+        flex-direction: column;
     }
-    
+
     .card {
         width: 100%;
         max-width: 300px;
     }
-    .projectTypes{
+
+    .projectTypes {
         flex-wrap: wrap;
     }
-    .projectTypes>li{
+
+    .projectTypes>li {
         justify-content: center;
         margin: 15px;
     }
-    .projectTypes>li>a{
-            white-space: nowrap;
-            
+
+    .projectTypes>li>a {
+        white-space: nowrap;
+
     }
 
 }

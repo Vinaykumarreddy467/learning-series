@@ -1,4 +1,4 @@
-@import url(/1task/css/colors.css);
+@import url(css/colors.css);
 
 .services-list {
     gap: 30px;
@@ -13,17 +13,19 @@
     background-color: var(--black-50);
     padding: 15px 8px;
     border-radius: 14px;
+    flex-wrap: wrap;
 
 }
 
 @media (max-width: 768px) {
+    
     .services-list {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
-    
     .card {
         width: 100%; /* Full width cards on mobile */
-        max-width: 300px;
+        align-items: center;
     }
 }
