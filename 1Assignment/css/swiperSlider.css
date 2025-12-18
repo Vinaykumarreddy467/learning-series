@@ -1,5 +1,5 @@
 
-@import url(/1task/colors.css);
+@import url(colors.css);
 
 .testimonial-swiper {
   height: 270px;
@@ -69,14 +69,13 @@
   font-size: 28px;
   font-weight: bold;
 }
-
-h4 {
-  text-decoration-style: solid;
-  margin-bottom: 4px;
+.testimonial-name{
+  padding-left: 30px;
 }
 
 small {
   color: #777;
+  margin-left: 30px;
 }
 
 /* Side slide fade */
@@ -104,4 +103,29 @@ small {
 .swiper-pagination-bullet-active {
   background-color: var(--orange-500);
   width: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .testimonial-swiper {
+        width: 100%;
+        height: auto; /* Allow card to grow with text */
+    }
+
+    .testimonial-card {
+        flex-direction: column; /* Stack avatar above text */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .quote {
+        padding: 0;
+    }
+    
+    .testimonial-name, small {
+        margin-left: 0;
+        padding-left: 0;
+    }
 }

@@ -178,3 +178,14 @@ p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
+
+@media (max-width: 768px) {
+    .body{
+            width: 100%;
+    }
+
+    .main, .margin-x {
+        margin: 0 20px;
+    }
+}

@@ -1,4 +1,4 @@
-@import url(/1task/css/colors.css);
+@import url(css/colors.css);
 
 .projectTypes>li {
     margin: 30px;
@@ -10,6 +10,10 @@
     background-color: var(--black-50);
     gap: 10px;
 }
+.projectTypes li.active {
+    background-color: var(--orange-400);
+    color: white;
+}
 .cards {
     display: flex;
     gap: 30px;
@@ -17,7 +21,7 @@
     flex-wrap: wrap;
 }
 
-.container {
+.project-card {
     width: 280px;
     height: 250px;
     background: #c4b4a6;
@@ -26,7 +30,7 @@
     overflow: hidden;
 }
 
-.container img {
+.project-card img {
     position: absolute;
     width: 50%;
     max-width: 260px;
@@ -53,5 +57,29 @@
 .project-title{
     font-weight: 700;
     font-size: bold;
+
+}
+
+@media (max-width: 768px) {
+    .services-list {
+        margin: 10px;
+        flex-direction: column;       
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+    .projectTypes{
+        flex-wrap: wrap;
+    }
+    .projectTypes>li{
+        justify-content: center;
+        margin: 15px;
+    }
+    .projectTypes>li>a{
+            white-space: nowrap;
+            
+    }
 
 }

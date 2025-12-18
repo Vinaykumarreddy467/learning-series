@@ -1,0 +1,158 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Basic Reset & Utility Styles */
+        body{
+            margin: 0;
+            padding: 100px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .button {
+            background-color: #fd6f00;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        /* Header & Layout Container (Flexbox) */
+        .site-header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 5%;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            /* Pushes logo to left, menu toggle to right */
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* --- Mobile Menu (Default State) --- */
+
+        .menu-button {
+            display: flex;
+            align-items: center;
+            background-color: #ddd;
+            /* Matches the grey background in your image */
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            color: #555;
+        }
+
+        .icon-image {
+            width: 20px;
+            /* Adjust size as needed */
+            height: 10px;
+            margin-right: 8px;
+            /* Spacing between icon and "Menu" text */
+        }
+
+        .main-nav ul {
+            display: none;
+            /* Hide menu by default on mobile */
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+            left: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            /* Ensure menu appears above other content */
+        }
+
+        .main-nav li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Checkbox Hack Magic: Show menu when checkbox is checked */
+        #menu-toggle:checked~.main-nav ul {
+            display: flex;
+        }
+
+        #menu-toggle {
+            display: none;
+            /* Hide the actual checkbox input */
+        }
+
+        /* --- Desktop Styles (Media Query) --- */
+        @media (min-width: 768px) {
+            .menu-button {
+                display: none;
+                /* Hide the hamburger button on desktop */
+            }
+
+            .main-nav ul {
+                display: flex !important;
+                /* Force menu to show horizontally on desktop */
+                flex-direction: row;
+                position: static;
+                box-shadow: none;
+                align-items: center;
+                gap: 15px;
+                /* Spacing between desktop links */
+            }
+
+            .main-nav li {
+                border-bottom: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <header class="site-header">
+            <div class="header-content">
+                <div class="logo"><img src="/1Assignment/images/banner-image.png" alt="banner-image"></div>
+
+
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-button">
+                    <!-- Your downloaded icon image goes here -->
+                    <img src="/1Assignment/images/list.svg" alt=" Icon" class="icon-image">
+
+                </label>
+
+                <!-- Navigation Menu -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" class="button">Download CV</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+    </header>
+</body>
+
+</html>
