@@ -1,53 +1,100 @@
-/* nav bar and banner section  */
-
+@import url(./colors.css);
+/* nav bar */
 .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .nav-image {
-    height: 30px;
-    width: 90px;
+  height: 30px;
+  width: 90px;
 }
 
 .nav-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;   /* //this needed to be removed after  */
-    justify-content: space-between;
-    gap: 20px;
-    white-space: nowrap;
-    
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  white-space: nowrap;
 }
+
 .nav-list li {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .nav-list li a {
-    border-bottom: 3px solid white;
-    transition: 0.2s ease-in-out;
+  border-bottom: 3px solid white;
+  transition: 0.2s ease-in-out;
 }
 
 .nav-list li a:hover,
 .nav-list li a:focus {
-    border-bottom: 3px solid #fd6f00;
+  border-bottom: 3px solid var(--orange-500);
 }
 
 .button {
-    background-color: #fd6f00;
-    border-radius: 10px;
-    padding: 5px 15px;
-    color: #fff;
-    cursor: pointer;
-    border: 1px solid #fd6f00;
-    font-family: 'Poppins', sans-serif;
-    white-space: nowrap;
+  background-color: #fd6f00;
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #fd6f00;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
 }
-.menu-button{
-    visibility:collapse ;
+
+/* base: hide toggle on desktop */
+.menu-button {
+  visibility: collapse;   /* stays as you requested */
+  border: none;
+  background: none;
+  cursor: pointer;
 }
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+  .nav {
+    position: relative;
+    align-items: center;
+  }
+
+  /* show hamburger */
+  .menu-button {
+    visibility: visible;
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    padding: 16px 0;
+    border-top: 1px solid #eee;
+    display: none;        /* IMPORTANT: hidden by default on mobile */
+    white-space: normal;
+    z-index: 1000;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+  }
+
+  /* when open */
+  .nav-list.nav-open {
+    display: flex;
+  }
+}
+
+
 
 /* banner section  */
 .im-text {

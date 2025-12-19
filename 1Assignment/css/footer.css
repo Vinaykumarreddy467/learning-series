@@ -1,10 +1,6 @@
-@import url(/1task/css/colors.css);
-/* footer{
-   
-    background-color: #f7f7f7;
-} */
+@import url(./colors.css);
+
  footer{
-  /* width: 100vw !important; */
   background-color: #f7f7f7;
 }
 .footer-image{
